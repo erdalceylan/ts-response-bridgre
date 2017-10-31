@@ -1,0 +1,24 @@
+{
+  "name": "ts-response-bridgre",
+  "version": "1.0.8",
+  "description": "javascript and typescript response bridge",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erdalceylan/ts-response-bridgre.git"
+  },
+  "author": "Erdal CEYLAN",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/erdalceylan/ts-response-bridgre/issues"
+  },
+  "homepage": "https://github.com/erdalceylan/ts-response-bridgre#readme",
+  "devDependencies": {
+    "typescript": "^2.5.3"
+  }
+}
