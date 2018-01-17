@@ -125,7 +125,7 @@ export class Bridge {
                         case Message.TYPE_SUCCESS :
                         case Message.TYPE_NOTICE:
                         case Message.TYPE_ERROR:
-                            message.setType(value.status);
+                            message.setType(value.type);
                             break;
                     }
 

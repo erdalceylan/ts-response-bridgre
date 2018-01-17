@@ -1,13 +1,13 @@
-#response bridge typescript library
+# response bridge typescript library
 
 ```
 "dependencies": {
     ...
-    "ts-response-bridgre" : "1.0.8"
+    "ts-response-bridgre" : "1.0.10"
 }
 ```
 
-##usage set data
+## usage set data
 ```typescript
 
     let message = new Message();

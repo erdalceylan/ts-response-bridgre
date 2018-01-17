@@ -33,7 +33,7 @@ var Message = /** @class */ (function () {
         return this.type;
     };
     Message.prototype.setType = function (type) {
-        this.type == type;
+        this.type = type;
         return this;
     };
     Message.TYPE_SUCCESS = "success";

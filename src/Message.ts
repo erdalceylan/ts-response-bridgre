@@ -48,7 +48,7 @@ export class Message{
     }
 
     setType(type : string) : Message{
-        this.type == type;
+        this.type = type;
         return this;
     }
 

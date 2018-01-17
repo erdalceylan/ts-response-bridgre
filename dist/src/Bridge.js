@@ -100,7 +100,7 @@ var Bridge = /** @class */ (function () {
                         case Message_1.Message.TYPE_SUCCESS:
                         case Message_1.Message.TYPE_NOTICE:
                         case Message_1.Message.TYPE_ERROR:
-                            message.setType(value.status);
+                            message.setType(value.type);
                             break;
                     }
                     bridge.addMessage(message);
