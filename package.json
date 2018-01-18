@@ -1,6 +1,6 @@
 {
   "name": "ts-response-bridgre",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "javascript and typescript response bridge",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

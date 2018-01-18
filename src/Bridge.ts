@@ -1,4 +1,5 @@
 import {Message} from "./Message";
+
 /**
  * Created by erdal on 30.10.2017.
  */
@@ -103,7 +104,7 @@ export class Bridge {
 
             let status = parseInt(jsonData.status);
 
-            if( status > 0 || status < 1){
+            if (status > 0 || status < 1) {
 
                 bridge.setStatus(status);
             }
@@ -116,6 +117,27 @@ export class Bridge {
             if (rMessages instanceof Array) {
 
                 rMessages.forEach((value: any) => {
+
+                    let message = new Message()
+                        .setKey(value.key)
+                        .setText(value.message);
+
+                    switch (value.type) {
+                        case Message.TYPE_SUCCESS :
+                        case Message.TYPE_NOTICE:
+                        case Message.TYPE_ERROR:
+                            message.setType(value.type);
+                            break;
+                    }
+
+                    bridge.addMessage(message);
+                });
+
+            } else if (rMessages instanceof Object) {
+
+                Object.keys(rMessages).forEach((key) => {
+
+                    let value: any = rMessages[key];
 
                     let message = new Message()
                         .setKey(value.key)

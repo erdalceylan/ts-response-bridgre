@@ -3,7 +3,7 @@
 ```
 "dependencies": {
     ...
-    "ts-response-bridgre" : "1.0.10"
+    "ts-response-bridgre" : "1.0.11"
 }
 ```
 

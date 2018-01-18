@@ -90,9 +90,25 @@ var Bridge = /** @class */ (function () {
             }
         }
         if (Object.prototype.hasOwnProperty.call(jsonData, "messages")) {
-            var rMessages = jsonData.messages;
-            if (rMessages instanceof Array) {
-                rMessages.forEach(function (value) {
+            var rMessages_1 = jsonData.messages;
+            if (rMessages_1 instanceof Array) {
+                rMessages_1.forEach(function (value) {
+                    var message = new Message_1.Message()
+                        .setKey(value.key)
+                        .setText(value.message);
+                    switch (value.type) {
+                        case Message_1.Message.TYPE_SUCCESS:
+                        case Message_1.Message.TYPE_NOTICE:
+                        case Message_1.Message.TYPE_ERROR:
+                            message.setType(value.type);
+                            break;
+                    }
+                    bridge.addMessage(message);
+                });
+            }
+            else if (rMessages_1 instanceof Object) {
+                Object.keys(rMessages_1).forEach(function (key) {
+                    var value = rMessages_1[key];
                     var message = new Message_1.Message()
                         .setKey(value.key)
                         .setText(value.message);
